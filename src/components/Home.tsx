@@ -1,17 +1,18 @@
-import { Line, UserText, ViewProject } from '@/vectors';
-import React from 'react'
+import { Line } from '@/vectors';
 
 type Props = {}
 
 const Home = (props: Props) => {
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center p-24">
-            <div className='flex flex-col items-center justify-center z-10'>
-                <UserText/>
+        <div className="flex min-h-screen flex-col items-center justify-center font-sunroll p-24">
+            <div className='flex flex-col items-center justify-center z-10 text-5xl text-center sm:text-6xl'>
+                <h1 className='lg:w-[80%] self-center leading-relaxed'>
+                    HeY THeRe! I’m an-najaat a ui/ux Designer
+                </h1>
             </div>
             <div aria-label='hidden' className='mt-16'></div>
             <div className='flex flex-col items-center justify-center'>
-                <p className="z-10 mt-2"> <ViewProject/></p>
+                <p className="z-10 mt-2 text-3xl">View projects</p>
                 <Targetter gotoAbout={() => { }} />
             </div>
 

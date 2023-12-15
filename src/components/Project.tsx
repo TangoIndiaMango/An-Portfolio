@@ -1,25 +1,22 @@
 
-import React from 'react'
-import MaxWidthWrapper from './MaxWidthWrapper'
-import ProjectCard from './ProjectCard'
-import { Projects } from '@/vectors'
-import { Coft, Wanderluxt, StreamIt } from '@/vectors';
+import MaxWidthWrapper from './MaxWidthWrapper';
+import ProjectCard from './ProjectCard';
 
 type Props = {}
 
 
 const PROJECT_TITLE = {
-    wonderluxt: <Wanderluxt />,
-    coft: <Coft />,
-    streamIt: <StreamIt />
+    wonderluxt: "WanderluxT",
+    coft: "COFT",
+    streamIt: "STReamiT"
 }
 
 const Project = (props: Props) => {
     return (
         <div id='project'>
-        
-            <h1 className='flex items-center justify-center self-center'>
-                <Projects />
+
+            <h1 className='flex items-center justify-center font-sunroll text-3xl self-center'>
+                projects
             </h1>
             <div aria-label='hidden' className='mt-16' />
             <MaxWidthWrapper>

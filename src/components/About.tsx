@@ -1,8 +1,7 @@
-import { AboutMe, Behance, Connet, Email, Experience, Linkden, Seperator, Skills, Twitter } from '@/vectors'
+import { Seperator } from '@/vectors'
 import Image from 'next/image'
-import React from 'react'
-import MaxWidthWrapper from './MaxWidthWrapper'
 import Link from 'next/link'
+import MaxWidthWrapper from './MaxWidthWrapper'
 
 type Props = {}
 
@@ -11,9 +10,9 @@ const About = (props: Props) => {
         <div className='w-full h-full bg-[#1E1E1E] font-raleway text-slate-100' id='aboutme'>
 
             <MaxWidthWrapper>
-                <div aria-label='hidden' className='mt-16' />
-                <div className='flex items-center justify-center font-sunroll text-5xl  '>
-                    ABOUT ME
+                <div className='flex items-center justify-center font-sunroll text-5xl'>
+                    <div aria-label='hidden' className='mt-[15%]' />
+                    abOuT me
                 </div>
                 <div aria-label='hidden' className='mt-16' />
 
@@ -40,8 +39,9 @@ const About = (props: Props) => {
                 <Seperator />
                 <div aria-label='hidden' className='mt-16' />
 
-                <div className='flex items-center justify-center p-6' id='experience'><Experience /></div>
-                <div className='flex items-center justify-evenly mt-6'>
+                <div className='w-full flex flex-col items-center justify-center self-center'>
+                <div className='flex items-center justify-center font-sunroll text-3xl p-6' id='experience'>experience</div>
+                <div className='w-full flex items-center justify-evenly mt-6'>
                     <div className='flex flex-col'>
                         <p className='text-sm'>2022</p>
                         <h3 className='font-semibold'>Design Intern</h3>
@@ -64,8 +64,8 @@ const About = (props: Props) => {
 
                 <div aria-label='hidden' className='mt-36' />
 
-                <div className='flex items-center justify-center p-6' id='skill'><Skills /></div>
-                <div className='flex items-center justify-evenly mt-6'>
+                <div className='flex items-center justify-center  font-sunroll text-3xl p-6' id='skill'>skills</div>
+                <div className='w-full flex items-center justify-evenly mt-6 ml-[6%]'>
                     <div className='flex flex-col'>
                         <p>Wireframing</p>
                         <h3>Prototyping</h3>
@@ -84,26 +84,27 @@ const About = (props: Props) => {
                     </div>
 
                 </div>
+                </div>
                 <div aria-label='hidden' className='mt-36' />
 
-                <div className='flex items-center justify-center p-6' id='resume'>VIEW MY RESUME</div>
+                <div className='flex items-center justify-center p-6 font-sunroll' id='resume'>View my resume</div>
                 <div aria-label='hidden' className='mt-16' />
                 <Seperator />
                 <div aria-label='hidden' className='mt-16' />
-                <div className='flex items-center flex-col justify-center space-y-20' id='connect'>
-                    <div><Connet /></div>
+                <div className='flex items-center flex-col justify-center space-y-20 font-sunroll' id='connect'>
+                    <h1 className='text-4xl'>let’s COnnecT</h1>
 
                     <Link href=''>
-                        <Linkden />
+                        linkedin
                     </Link>
                     <Link href=''>
-                        <Email />
+                        email
                     </Link>
                     <Link href=''>
-                        <Behance />
+                        behance
                     </Link>
                     <Link href=''>
-                        <Twitter />
+                        twitter
                     </Link>
 
 

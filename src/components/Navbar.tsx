@@ -1,11 +1,9 @@
 "use client"
 
-import { HamburgerIcon, Logo } from '@/vectors'
-import Image from 'next/image'
-import React from 'react'
-import MaxWidthWrapper from './MaxWidthWrapper'
-import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { HamburgerIcon, Logo } from '@/vectors'
+import Link from 'next/link'
+import React from 'react'
 type Props = {}
 
 const Navbar = ({ active, isDark }: { active?: string | any, isDark?: boolean }) => {

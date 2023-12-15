@@ -1,19 +1,19 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import localFont from 'next/font/local'
 import Navbar from '../components/Navbar'
-import localFont from '@next/font/local'
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 const sunroll = localFont({
   src: [
     {
-      path: 'public/fonts/Sunroll-Bold.ttf',
+      path: 'fonts/Sunroll-Bold.ttf',
       weight: '800',
     },
     {
-      path: 'public/fonts/Sunroll.ttf',
+      path: 'fonts/Sunroll.ttf',
       weight: '400',
     }
   ],
