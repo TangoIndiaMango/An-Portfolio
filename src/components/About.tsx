@@ -1,25 +1,52 @@
-import { Seperator } from '@/vectors'
+"use client"
+
 import Image from 'next/image'
 import Link from 'next/link'
 import MaxWidthWrapper from './MaxWidthWrapper'
+import { Separator } from './ui/separator'
+import { motion } from 'framer-motion'
 
 type Props = {}
 
 const About = (props: Props) => {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 1 } },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: -20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.5 } },
+    };
     return (
-        <div className='w-full h-full bg-[#1E1E1E] font-raleway text-slate-100' id='aboutme'>
+        <motion.div className='w-full h-full bg-[#1E1E1E] font-raleway text-slate-100'
+            variants={containerVariants}
+            initial='hidden'
+            animate='visible'
+            id='aboutme'>
+            <div aria-label='hidden' />
+
             <MaxWidthWrapper>
-                <div className='flex items-center justify-center font-sunroll text-5xl mt-16 sm:mt-24 lg:mt-32'>
-                    abOuT me
+                <div className='flex items-center justify-center font-sunroll'>
+                    <h1 className='text-5xl mt-10'>abOuT me</h1>
                 </div>
                 <div aria-label='hidden' className='mt-16' />
 
 
 
 
-                <div className='w-full flex flex-col items-center justify-center sm:flex-row'>
+                <motion.div className='w-full flex flex-col items-center justify-center sm:flex-row'
+                    variants={itemVariants}
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+
+                >
+
                     <Image className='mb-6 sm:mb-0 sm:mr-6' src="/face.png" width={310} height={414} alt='Profile face' />
-                    <div className='text-justify flex flex-col items-center justify-center lg:items-start'>
+
+
+                    <motion.div variants={itemVariants} className='text-justify flex flex-col items-center justify-center lg:items-start'>
                         <h3 className='mb-4'>BIO</h3>
                         <p className='mb-4'>Hi, I&apos;m An-najaat Salami, a passionate UX Designer with 2 years of experience. I&apos;m dedicated to creating intuitive and visually appealing designs that elevate user experiences. From mobile apps to web interfaces, I&apos;ve had the privilege of working on a variety of projects, always with the user at the forefront of my mind. </p>
 
@@ -27,57 +54,57 @@ const About = (props: Props) => {
 
                         <h3 className='mb-2'>Contact</h3>
                         <p>Lagos, Nigeria</p>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
 
 
                 <div aria-label='hidden' className='mt-16' />
-                <Seperator />
+                <Separator />
                 <div aria-label='hidden' className='mt-16' />
 
 
                 <div className='flex items-center justify-center font-sunroll text-3xl p-6' id='experience'>experience</div>
-                <div className='w-full flex items-center justify-evenly mt-6'>
-                    <div className='flex flex-col'>
+                <div className='w-full flex flex-wrap items-center justify-evenly gap-2 mt-6'>
+                    <motion.div variants={itemVariants} className='flex flex-col'>
                         <p className='text-sm'>2022</p>
                         <h3 className='font-semibold'>Design Intern</h3>
                         <p>TechDev</p>
-                    </div>
+                    </motion.div>
 
-                    <div className='flex flex-col'>
+                    <motion.div variants={itemVariants} className='flex flex-col'>
                         <p className='text-sm'>2022  - Present</p>
                         <h3 className='font-semibold'>UX Designer</h3>
                         <p>Freelance</p>
-                    </div>
+                    </motion.div>
 
-                    <div className='flex flex-col'>
+                    <motion.div variants={itemVariants} className='flex flex-col'>
                         <p className='text-sm'>2022</p>
                         <h3 className='font-semibold'>UX Designer</h3>
                         <p>TrazDev</p>
-                    </div>
+                    </motion.div>
 
                 </div>
 
                 <div aria-label='hidden' className='mt-36' />
 
-                <div className='flex items-center justify-center  font-sunroll text-3xl p-6' id='skill'>skills</div>
-                <div className='w-full flex items-center justify-evenly mt-6 ml-[3%]'>
-                    <div className='flex flex-col'>
+                <div className='flex items-center justify-center font-sunroll text-3xl p-6' id='skill'>skills</div>
+                <div className='w-full flex flex-wrap items-center justify-evenly mt-6 ml-[3%]'>
+                    <motion.div variants={itemVariants} className='flex flex-col'>
                         <p>Wireframing</p>
-                        <h3>Prototyping</h3>
+                        <p>Prototyping</p>
                         <p>Visual Design</p>
-                    </div>
+                    </motion.div>
 
-                    <div className='flex flex-col'>
+                    <motion.div variants={itemVariants} className='flex flex-col'>
                         <p>UX Research</p>
-                        <h3>Useability Testing</h3>
+                        <p>Useability Testing</p>
                         <p>Interaction Design</p>
-                    </div>
+                    </motion.div>
 
-                    <div className='flex flex-col'>
+                    <motion.div variants={itemVariants} className='flex flex-col'>
                         <p>Competitive Analysis</p>
-                        <h3>Informative Architecture</h3>
-                    </div>
+                        <p>Informative Architecture</p>
+                    </motion.div>
 
 
                 </div>
@@ -85,10 +112,10 @@ const About = (props: Props) => {
 
                 <div className='flex items-center justify-center p-6 font-sunroll' id='resume'>View my resume</div>
                 <div aria-label='hidden' className='mt-16' />
-                <Seperator />
+                <Separator />
                 <div aria-label='hidden' className='mt-16' />
-                <div className='flex items-center flex-col justify-center space-y-20 font-sunroll' id='connect'>
-                    <h1 className='text-4xl'>let’s COnnecT</h1>
+                <motion.div variants={itemVariants} className='flex items-center flex-col justify-center space-y-20 font-sunroll' id='connect'>
+                    <h1 className='text-4xl'>let&apos;s COnnecT</h1>
 
                     <Link href=''>
                         linkedin
@@ -105,9 +132,9 @@ const About = (props: Props) => {
 
 
                     <div aria-label='hidden' className='mt-16' />
-                </div>
+                </motion.div>
             </MaxWidthWrapper>
-        </div>
+        </motion.div>
     )
 }
 

@@ -32,12 +32,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${sunroll.variable} font-sans`}>
-      <body className='bg-mainBackground font-raleway overflow-x-hidden sm:overflow-x-hidden'>
-        <main >
+      <body className='w-screen h-screen bg-mainBackground font-raleway overflow-x-hidden sm:overflow-x-hidden'>
+        <main className='w-[100%]'>
           <Navbar />
-          <div className=" w-[340px] h-[340px] bg-[#FFEF61] rounded-[100%] absolute z-1 top-[55%] left-[50%] -translate-x-[50%] -translate-y-[50%] blur-[90px]">
-            
-          </div>
+          <div className=" w-[340px] h-[340px] bg-[#FFEF61] rounded-[100%] absolute z-1 top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] blur-[90px]" />
           {children}
         </main>
 
