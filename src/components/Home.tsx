@@ -5,8 +5,8 @@ type Props = {}
 const Home = (props: Props) => {
     return (
         <div className="flex min-h-screen flex-col items-center justify-center font-sunroll p-24">
-            <div className='flex flex-col items-center justify-center z-10 text-5xl text-center sm:text-6xl'>
-                <h1 className='lg:w-[80%] self-center leading-relaxed'>
+            <div className='flex flex-col items-center justify-center z-10 text-3xl text-center sm:text-6xl'>
+                <h1 className='lg:w-[80%] self-center'>
                     HeY THeRe! I’m an-najaat a ui/ux Designer
                 </h1>
             </div>

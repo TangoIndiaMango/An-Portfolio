@@ -8,10 +8,8 @@ type Props = {}
 const About = (props: Props) => {
     return (
         <div className='w-full h-full bg-[#1E1E1E] font-raleway text-slate-100' id='aboutme'>
-
             <MaxWidthWrapper>
-                <div className='flex items-center justify-center font-sunroll text-5xl'>
-                    <div aria-label='hidden' className='mt-[15%]' />
+                <div className='flex items-center justify-center font-sunroll text-5xl mt-16 sm:mt-24 lg:mt-32'>
                     abOuT me
                 </div>
                 <div aria-label='hidden' className='mt-16' />
@@ -20,9 +18,7 @@ const About = (props: Props) => {
 
 
                 <div className='w-full flex flex-col items-center justify-center sm:flex-row'>
-
-                    <Image className='mb-6 sm:mb-0 sm:mr-6' src="/face.png" width={310} height={130} alt='Profile face' />
-
+                    <Image className='mb-6 sm:mb-0 sm:mr-6' src="/face.png" width={310} height={414} alt='Profile face' />
                     <div className='text-justify flex flex-col items-center justify-center lg:items-start'>
                         <h3 className='mb-4'>BIO</h3>
                         <p className='mb-4'>Hi, I&apos;m An-najaat Salami, a passionate UX Designer with 2 years of experience. I&apos;m dedicated to creating intuitive and visually appealing designs that elevate user experiences. From mobile apps to web interfaces, I&apos;ve had the privilege of working on a variety of projects, always with the user at the forefront of my mind. </p>
@@ -39,7 +35,7 @@ const About = (props: Props) => {
                 <Seperator />
                 <div aria-label='hidden' className='mt-16' />
 
-                <div className='w-full flex flex-col items-center justify-center self-center'>
+
                 <div className='flex items-center justify-center font-sunroll text-3xl p-6' id='experience'>experience</div>
                 <div className='w-full flex items-center justify-evenly mt-6'>
                     <div className='flex flex-col'>
@@ -65,7 +61,7 @@ const About = (props: Props) => {
                 <div aria-label='hidden' className='mt-36' />
 
                 <div className='flex items-center justify-center  font-sunroll text-3xl p-6' id='skill'>skills</div>
-                <div className='w-full flex items-center justify-evenly mt-6 ml-[6%]'>
+                <div className='w-full flex items-center justify-evenly mt-6 ml-[3%]'>
                     <div className='flex flex-col'>
                         <p>Wireframing</p>
                         <h3>Prototyping</h3>
@@ -83,7 +79,7 @@ const About = (props: Props) => {
                         <h3>Informative Architecture</h3>
                     </div>
 
-                </div>
+
                 </div>
                 <div aria-label='hidden' className='mt-36' />
 
