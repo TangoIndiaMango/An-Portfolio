@@ -78,3 +78,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'Sunroll-Bold';
+  src: url('C:/Users/aliyu/OneDrive/Desktop/najat_portfolio/public/fonts/Sunroll-Bold.otf') format('otf'), url('C:/Users/aliyu/OneDrive/Desktop/najat_portfolio/public/fonts/Sunroll-Bold.tff') format('truetype');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sunroll';
+  src: url('C:/Users/aliyu/OneDrive/Desktop/najat_portfolio/public/fonts/Sunroll.otf') format('otf'), url('C:/Users/aliyu/OneDrive/Desktop/najat_portfolio/public/fonts/Sunroll.ttf') format('truetype');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}

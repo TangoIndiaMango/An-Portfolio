@@ -54,6 +54,7 @@ module.exports = {
       },
       fontFamily: {
         raleway: ['Raleway', "sans-serif"],
+        sunroll: ['var(--font-sunroll)'],
       },
       borderRadius: {
         lg: "var(--radius)",

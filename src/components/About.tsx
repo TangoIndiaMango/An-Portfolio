@@ -12,8 +12,8 @@ const About = (props: Props) => {
 
             <MaxWidthWrapper>
                 <div aria-label='hidden' className='mt-16' />
-                <div className='flex items-center justify-center  '>
-                    <AboutMe />
+                <div className='flex items-center justify-center font-sunroll text-5xl  '>
+                    ABOUT ME
                 </div>
                 <div aria-label='hidden' className='mt-16' />
 
