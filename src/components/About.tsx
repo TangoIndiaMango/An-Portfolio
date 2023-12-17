@@ -35,32 +35,30 @@ const About = (props: Props) => {
 
 
 
-                <div className='w-full flex flex-col items-center justify-center sm:flex-row'>
-
-                    <Reveal>
+                <Reveal>
+                    <div className='w-full flex flex-col items-center justify-center sm:flex-row'>
 
                         <Image className='mb-6 sm:mb-0 sm:mr-6' src="/face.png" width={310} height={414} alt='Profile face' />
 
-                    </Reveal>
 
 
-                    <div className='text-justify flex flex-col items-center justify-center lg:items-start'>
-                        <Reveal>
-                            <h3 className='mb-4'>BIO</h3>
-                        </Reveal>
-                        <Reveal>
-                            <p className='mb-4 tracking-normal leading-relaxed'>Hi, I&apos;m An-najaat Salami, a passionate UX Designer with 2 years of experience. I&apos;m dedicated to creating intuitive and visually appealing designs that elevate user experiences. From mobile apps to web interfaces, I&apos;ve had the privilege of working on a variety of projects, always with the user at the forefront of my mind. </p>
-                        </Reveal>
-                        <Reveal>
-                            <p className='mb-4 tracking-normal leading-relaxed'>Beyond design, I enjoy reading books, writing, and expressing myself through drawing and painting. Let&apos;s collaborate and craft exceptional digital experiences together!</p>
-                        </Reveal>
-                        <Reveal>
-                            <h3 className='mb-2'>Contact</h3>
-                            <p>Lagos, Nigeria</p>
-                        </Reveal>
+                        <div className='text-justify flex flex-col items-center justify-center lg:items-start'>
+                            <Reveal>
+                                <h3 className='mb-4'>BIO</h3>
+                            </Reveal>
+                            <Reveal>
+                                <p className='mb-4 tracking-normal leading-relaxed'>Hi, I&apos;m An-najaat Salami, a passionate UX Designer with 2 years of experience. I&apos;m dedicated to creating intuitive and visually appealing designs that elevate user experiences. From mobile apps to web interfaces, I&apos;ve had the privilege of working on a variety of projects, always with the user at the forefront of my mind. </p>
+                            </Reveal>
+                            <Reveal>
+                                <p className='mb-4 tracking-normal leading-relaxed'>Beyond design, I enjoy reading books, writing, and expressing myself through drawing and painting. Let&apos;s collaborate and craft exceptional digital experiences together!</p>
+                            </Reveal>
+                            <Reveal>
+                                <h3 className='mb-2'>Contact</h3>
+                                <p>Lagos, Nigeria</p>
+                            </Reveal>
+                        </div>
                     </div>
-                </div>
-
+                </Reveal>
                 <div aria-label='hidden' className='mt-16' />
                 <Separator />
                 <div aria-label='hidden' className='mt-16' />

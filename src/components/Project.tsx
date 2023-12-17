@@ -28,12 +28,12 @@ const Project = (props: Props) => {
 
                     <ProjectCard projectTitle={PROJECT_TITLE.wonderluxt} projectImage='/wanderluxt.png' projectDescription='A travel website where you can seamlessly book flights and accommodations, ensuring a smooth travel experience tailored to your preferences.' />
 
-                    <div className='mt-16' />
+                    <div aria-label='hidden' className='mt-20' />
 
 
                     <ProjectCard projectTitle={PROJECT_TITLE.coft} projectImage='/coft.png' projectDescription='A travel website where you can seamlessly book flights and accommodations, ensuring a smooth travel experience tailored to your preferences.' />
 
-                    <div aria-label='hidden' className='mt-16' />
+                    <div aria-label='hidden' className='mt-20' />
 
                     <ProjectCard projectTitle={PROJECT_TITLE.streamIt} projectImage='/streamit.png' projectDescription='A mobile application with a user-friendly interface, allowing seamless navigation and providing a visually appealing movie streaming experience on-the-go.' />
                     <div className='mb-10' />

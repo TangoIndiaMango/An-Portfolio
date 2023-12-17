@@ -43,10 +43,10 @@ const ProjectCard = ({ projectTitle, projectDescription, projectImage }: Props) 
                 <div className='flex items-center justify-center'>
                     <Image
                         src={projectImage}
-                        width={320}
-                        height={260}
+                        width={550}
+                        height={360}
                         alt='project Image'
-                        className='w-[320px] md:w-[450px] object-fit object-contain'
+                        className='w-[320px] md:w-[550px] object-fit object-contain'
                     />
                 </div>
             </Reveal>
