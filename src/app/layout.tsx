@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 import Navbar from '../components/Navbar'
 import './globals.css'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,12 +34,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sunroll.variable} font-sans`}>
       <body className='w-screen h-screen bg-mainBackground font-raleway overflow-x-hidden sm:overflow-x-hidden'>
-        <main className='w-[100%]'>
+        <main className='w-screen flex flex-col items-center'>
           <Navbar />
-          <div className=" w-[340px] h-[340px] bg-[#FFEF61] rounded-[100%] absolute z-1 top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] blur-[90px]" />
+          <div className="relative w-[280px] h-[240px] md:w-[340px] md:h-[340px] bg-[#FFEF61] rounded-full blur-[90px] mt-10 md:mt-0" />
           {children}
         </main>
-
       </body>
     </html>
   )

@@ -5,19 +5,19 @@ type Props = {}
 
 const Home = (props: Props) => {
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center font-sunroll p-24">
-            <div className='flex flex-col items-center justify-center z-10 text-3xl text-center sm:text-6xl'>
-                <h1 className='lg:w-[80%] self-center'>
+        <div className="w-full relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sunroll md:p-24">
+            <div className='flex flex-col items-center justify-center z-10 text-center'>
+                <h1 className='w-70 lg:w-[80%] md:text-6xl text-3xl '>
                     <TypeWriterText />
                 </h1>
             </div>
             <div aria-label='hidden' className='mt-16'></div>
-            <div className='flex flex-col items-center justify-center'>
-                <p className="z-10 mt-2 text-2xl md:3xl">View projects</p>
+            <div className='flex flex-col items-center justify-center text-center'>
+                <p className="mt-2 text-2xl md:text-3xl">View projects</p>
                 <Targetter gotoAbout={() => { }} />
             </div>
-
         </div>
+
     )
 }
 

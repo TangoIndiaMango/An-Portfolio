@@ -23,7 +23,7 @@ const Project = (props: Props) => {
             <MaxWidthWrapper>
                 <motion.div initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }} 
+                    transition={{ duration: 0.5, delay: 0.5 }}
                     className=' w-full h-full flex flex-col justify-between items-center'>
 
                     <ProjectCard projectTitle={PROJECT_TITLE.wonderluxt} projectImage='/wanderluxt.png' projectDescription='A travel website where you can seamlessly book flights and accommodations, ensuring a smooth travel experience tailored to your preferences.' />

@@ -6,7 +6,7 @@ type Props = {}
 
 const TypeWriterText = (props: Props) => {
   return (
-    <>
+    <div className='flex items-center justify-center'>
     <Typewriter options={{
       loop: true,
     }} 
@@ -15,7 +15,7 @@ const TypeWriterText = (props: Props) => {
     }}
     />
     
-    </>
+    </div>
   )
 }
 
