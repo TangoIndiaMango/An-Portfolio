@@ -86,7 +86,7 @@ const MobileMenu = ({ setMenuOpen, menuItems, active, onItemClick }: { setMenuOp
                     <HamburgerIcon />
                 </button>
             </div>
-            <div className="w-full h-full flex flex-col items-center justify-center space-y-8 p-4">
+            <div className="w-full h-full flex flex-col items-center justify-center space-y-20 p-4">
                 {menuItems.map((item, index) => (
                     <MenuItem
                         {...item}
