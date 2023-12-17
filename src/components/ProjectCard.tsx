@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
+import Reveal from './Reveal';
 
 type Props = {
     projectTitle: string | React.ReactNode;
@@ -22,28 +23,34 @@ const ProjectCard = ({ projectTitle, projectDescription, projectImage }: Props) 
     };
 
     return (
-        <motion.div
+        <div
             className='my-8 flex flex-col items-center justify-center'
-            initial='hidden'
-            animate='visible'
-            variants={containerVariants}
+
         >
-            <motion.h2 className='p-3 font-sunroll font-bold text-5xl' variants={textVariants}>
-                {projectTitle}
-            </motion.h2>
-            <motion.p className='font-raleway p-20 pt-2 text-center tracking-wide' variants={textVariants}>
-                {projectDescription}
-            </motion.p>
-            <motion.div className='flex items-center justify-center' variants={textVariants}>
-                <Image
-                    src={projectImage}
-                    width={320}
-                    height={260}
-                    alt='project Image'
-                    className='w-[320px] md:w-[450px] object-fit object-contain'
-                />
-            </motion.div>
-        </motion.div>
+            <Reveal>
+                <h2 className='p-3 font-sunroll font-bold text-5xl'>
+                    {projectTitle}
+                </h2>
+            </Reveal>
+
+            <Reveal>
+                <p className='font-raleway p-20 pt-2 text-center tracking-wide'>
+                    {projectDescription}
+                </p>
+            </Reveal>
+
+            <Reveal>
+                <div className='flex items-center justify-center'>
+                    <Image
+                        src={projectImage}
+                        width={320}
+                        height={260}
+                        alt='project Image'
+                        className='w-[320px] md:w-[450px] object-fit object-contain'
+                    />
+                </div>
+            </Reveal>
+        </div>
     );
 };
 

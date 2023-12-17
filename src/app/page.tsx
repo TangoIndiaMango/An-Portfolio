@@ -6,9 +6,10 @@ import Home from '../components/Home';
 import Project from '../components/Project';
 
 export default function Page() {
-  
+
   return (
     <>
+
       <Home />
 
       <Project />
@@ -16,6 +17,7 @@ export default function Page() {
       <About />
 
       <Footer />
+
     </>
   )
 }
