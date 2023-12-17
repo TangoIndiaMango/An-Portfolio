@@ -13,7 +13,7 @@ const Home = (props: Props) => {
             </div>
             <div aria-label='hidden' className='mt-16'></div>
             <div className='flex flex-col items-center justify-center text-center'>
-                <p className="mt-2 text-2xl md:text-3xl">View projects</p>
+                <p className="mt-3 text-xl md:text-2xl">View projects</p>
                 <Targetter gotoAbout={() => { }} />
             </div>
         </div>

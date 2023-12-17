@@ -11,7 +11,7 @@ const TypeWriterText = (props: Props) => {
       loop: true,
     }} 
     onInit={(typewriter) => {
-      typewriter.typeString("HeY THeRe! I’m an-najaat a ui/ux Designer").pauseFor(4000).deleteChars(16).typeString("a Graphic Designer").pauseFor(4000).start()
+      typewriter.typeString("HeY THeRe! I’m an-najaat a ui/ux Designer").pauseFor(6000).start()
     }}
     />
     
