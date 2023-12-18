@@ -6,7 +6,7 @@ type Props = {}
 const Home = (props: Props) => {
     return (
         <div className="w-full relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sunroll md:p-24">
-            <div className='flex flex-col items-center justify-center z-10 text-center'>
+            <div className='h-screen md:h-10 flex flex-col items-center justify-center z-10 text-center'>
                 <h1 className='w-70 lg:w-[80%] md:text-6xl text-3xl '>
                     <TypeWriterText />
                 </h1>

@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import MaxWidthWrapper from './MaxWidthWrapper'
 import { Separator } from './ui/separator'
-import { motion } from 'framer-motion'
 import Reveal from './Reveal'
 
 type Props = {}
@@ -38,16 +37,16 @@ const About = (props: Props) => {
                 <Reveal>
                     <div className='w-full flex flex-col items-center justify-center sm:flex-row'>
 
-                        <Image className='mb-6 sm:mb-0 sm:mr-6' src="/face.png" width={310} height={414} alt='Profile face' />
+                        <div className='mb-6 sm:mb-0 sm:mr-6 flex-1 flex items-center justify-center'>
+                            <Image src="/face.png" width={310} height={414} alt='Profile face' />
+                        </div>
 
-
-
-                        <div className='text-justify flex flex-col items-center justify-center lg:items-start'>
+                        <div className='text-justify flex flex-col items-center text-sm md:text-xl justify-center lg:items-start flex-1'>
                             <Reveal>
                                 <h3 className='mb-4'>BIO</h3>
                             </Reveal>
                             <Reveal>
-                                <p className='mb-4 tracking-normal leading-relaxed'>Hi, I&apos;m An-najaat Salami, a passionate UX Designer with 2 years of experience. I&apos;m dedicated to creating intuitive and visually appealing designs that elevate user experiences. From mobile apps to web interfaces, I&apos;ve had the privilege of working on a variety of projects, always with the user at the forefront of my mind. </p>
+                                <p className='mb-4 tracking-normal leading-relaxed'>Hi, I&apos;m An-najaat Salami, a passionate UX Designer with 2 years of experience. I&apos;m dedicated to creating intuitive and visually appealing designs that elevate user experiences. From mobile apps to web interfaces, I&apos;ve had the privilege of working on a variety of projects, always with the user at the forefront of my mind.</p>
                             </Reveal>
                             <Reveal>
                                 <p className='mb-4 tracking-normal leading-relaxed'>Beyond design, I enjoy reading books, writing, and expressing myself through drawing and painting. Let&apos;s collaborate and craft exceptional digital experiences together!</p>
@@ -58,6 +57,9 @@ const About = (props: Props) => {
                             </Reveal>
                         </div>
                     </div>
+
+
+
                 </Reveal>
                 <div aria-label='hidden' className='mt-16' />
                 <Separator />
@@ -68,26 +70,26 @@ const About = (props: Props) => {
                     <div className='flex items-center justify-center font-sunroll text-3xl p-6' id='experience'>experience</div>
                 </Reveal>
                 <div className='w-full grid grid-cols-3 place-content-evenly place-items-center text-sm md:text-xl tracking-normal gap-2 mt-6'>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col text-sm'>
                         <Reveal>
-                            <p className='text-sm'>2022</p>
-                            <h3 className='font-semibold'>Design Intern</h3>
+                            <p>2022</p>
+                            <h3 className=' md:text-xl'>Design Intern</h3>
                             <p>TechDev</p>
                         </Reveal>
                     </div>
 
 
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col text-sm'>
                         <Reveal>
-                            <p className='text-sm'>2022  - Present</p>
-                            <h3 className='font-semibold'>UX Designer</h3>
+                            <p>2022  - Present</p>
+                            <h3 className=' md:text-xl'>UX Designer</h3>
                             <p>Freelance</p>
                         </Reveal>
                     </div>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col text-sm'>
                         <Reveal>
-                            <p className='text-sm'>2022</p>
-                            <h3 className='font-semibold'>UX Designer</h3>
+                            <p>2022</p>
+                            <h3 className=' md:text-xl'>UX Designer</h3>
                             <p>TrazDev</p>
                         </Reveal>
                     </div>
@@ -99,8 +101,8 @@ const About = (props: Props) => {
                 <Reveal>
                     <div className='flex items-center justify-center font-sunroll text-3xl p-6' id='skill'>skills</div>
                 </Reveal>
-                <div className='w-full grid grid-cols-3 place-content-evenly place-items-center gap-2 p-2 text-sm md:text-xl tracking-normal  mt-6'>
-                    <div className='flex flex-col'>
+                <div className='w-full grid grid-cols-3 place-content-evenly place-items-center text-sm md:text-xl tracking-normal gap-2 mt-6'>
+                    <div className='flex flex-col text-sm'>
                         <Reveal>
                             <p>Wireframing</p>
                             <p>Prototyping</p>
@@ -108,7 +110,7 @@ const About = (props: Props) => {
                         </Reveal>
                     </div>
 
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col text-sm'>
                         <Reveal>
                             <p>UX Research</p>
                             <p>Useability Testing</p>
@@ -116,7 +118,7 @@ const About = (props: Props) => {
                         </Reveal>
                     </div>
 
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col text-sm'>
                         <Reveal>
                             <p>Competitive Analysis</p>
                             <p>Informative Architecture</p>

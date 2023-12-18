@@ -34,7 +34,7 @@ const ProjectCard = ({ projectTitle, projectDescription, projectImage }: Props) 
             </Reveal>
 
             <Reveal>
-                <p className='font-raleway p-20 pt-2 text-center tracking-wide'>
+                <p className='w-full pb-5 font-raleway pt-2 text-center text-sm md:text-xl md:p-20 tracking-wide'>
                     {projectDescription}
                 </p>
             </Reveal>
