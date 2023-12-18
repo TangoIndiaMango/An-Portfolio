@@ -15,7 +15,7 @@ const Home = (props: Props) => {
                     <TypeWriterText />
                 </h1>
                 <div className='mt-16' />
-                <div className="flex flex-col items-center justify-center my-8 md:my-10">
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 my-8 md:my-10">
                     <p className="font-sunroll text-xl md:text-2xl">View projects</p>
                     <Targetter gotoAbout={() => { }} />
                 </div>
