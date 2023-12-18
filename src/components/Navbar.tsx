@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import { HamburgerIcon, Logo } from '@/vectors'
+import { motion, useAnimation } from 'framer-motion'
 import Link from 'next/link'
 import React from 'react'
 import MaxWidthWrapper from './MaxWidthWrapper'
@@ -33,6 +34,15 @@ const Navbar = ({ active, isDark }: { active?: string | any, isDark?: boolean })
         setMenuOpen(false);
     };
 
+    const controls = useAnimation();
+
+    const toggleMenu = async () => {
+        await controls.start({ opacity: 0, x: -20, transition: { duration: 0.2 }, }); // Animate out
+        setMenuOpen(!menuOpen);
+        await controls.start({ opacity: 1, x: 0, transition: { duration: 0.2 }, }); // Animate in
+    };
+
+
     return (
         <MaxWidthWrapper>
             <header className='w-full h-20 flex items-center justify-between px-4 mb-10 sm:fixed sm:top-0 md:relative md:top-0 sm:bg-clip-padding hover:bg-clip-text'>
@@ -52,10 +62,10 @@ const Navbar = ({ active, isDark }: { active?: string | any, isDark?: boolean })
                 </nav>
 
                 {/* Hamburger icon for smaller screens */}
-                <div className='md:hidden'>
-                    <button onClick={() => setMenuOpen(!menuOpen)}>
+                <div className='z-10 md:hidden'>
+                    <motion.button onClick={toggleMenu} initial={{ opacity: 1, x: -20 }} animate={controls}>
                         <HamburgerIcon />
-                    </button>
+                    </motion.button>
                 </div>
 
                 <div className="hidden md:block">
@@ -79,12 +89,14 @@ const Navbar = ({ active, isDark }: { active?: string | any, isDark?: boolean })
 };
 
 const MobileMenu = ({ setMenuOpen, menuItems, active, onItemClick }: { setMenuOpen: (i: boolean) => void, menuItems: any[], active: string, onItemClick: () => void }) => {
+
     return (
         <MaxWidthWrapper>
             <div className="fixed top-0 left-0 w-full h-full bg-mainBackground z-50 overflow-y-hidden">
                 <div className="flex items-center justify-between p-4 border-b border-gray-300">
                     <Logo />
-                    <button onClick={() => { setMenuOpen(false); onItemClick(); }}>
+                    <button
+                        onClick={() => { setMenuOpen(false); onItemClick(); }}>
                         <HamburgerIcon />
                     </button>
                 </div>
@@ -109,12 +121,15 @@ const MobileMenu = ({ setMenuOpen, menuItems, active, onItemClick }: { setMenuOp
 };
 
 export const MenuItem = ({ name, linkTo, active, onClick }: { name: string, linkTo: string, active: string, onClick?: () => void }) => (
-    <div
+    <motion.div initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.2 }}
+        
         className={`menu-item ${linkTo === active ? 'active' : ''}`}
         onClick={onClick}
     >
         <Link href={linkTo}>{name}</Link>
-    </div>
+    </motion.div>
 );
 
 export default Navbar;
