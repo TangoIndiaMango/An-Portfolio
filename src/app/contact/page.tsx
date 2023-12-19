@@ -7,10 +7,10 @@ type Props = {}
 const page = (props: Props) => {
     return (
         <>
-        <div className='mt-16 flex flex-col items-center justify-center font-raleway'>
+        <div className='flex flex-col items-center justify-center font-raleway mt-16 md:mt-0'>
             <h2 className='text-2xl font-bold self-center'>Contact Me</h2>
         </div>
-        <div>
+        <div className='w-full h-full p-3 mt-16 md:mt-0'>
             <ContactForm/>
         </div>
         </>

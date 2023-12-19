@@ -1,5 +1,6 @@
 import { Line } from '@/vectors';
 import TypeWriterText from './TypeWriterText';
+import Link from 'next/link';
 
 type Props = {}
 const Home = (props: Props) => {
@@ -17,8 +18,8 @@ const Home = (props: Props) => {
                     </h1>
                 </div>
                 <div className='mt-16' aria-label='hidden' />
-                <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 -translate-y-1/2 my-8 md:my-10 z-10">
-                    <p className="font-sunroll text-xl md:text-2xl">View projects</p>
+                <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                    <p className="font-sunroll text-xl md:text-2xl mb-3">View projects</p>
                     <Targetter gotoAbout={() => { }} />
 
 
@@ -38,8 +39,10 @@ const Targetter = ({
 }: {
     gotoAbout?: () => void;
 }) => (
-    <div className='flex items-center justify-center z-10'>
+    <div className='flex items-center justify-center z-10 animate-bounce'>
+        <Link href="#project">
         <Line />
+        </Link>
     </div>
 );
 

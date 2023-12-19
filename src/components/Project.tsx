@@ -15,7 +15,7 @@ const PROJECT_TITLE = {
 
 const Project = (props: Props) => {
     return (
-        <div id='project'>
+        <div id='project' className='mt-16'>
             <Reveal>
                 <h1 className='flex items-center justify-center font-sunroll text-3xl self-center'>
                     projects

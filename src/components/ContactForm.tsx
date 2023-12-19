@@ -40,7 +40,7 @@ const ContactForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="z-10 max-w-md mx-auto font-raleway">
+    <form onSubmit={handleSubmit} className="w-full z-10 max-w-md mx-auto font-raleway flex flex-col items-center justify-center">
       <div className="w-full flex flex-col my-4">
         <label className="font-bold text-gray-800" htmlFor="name">
           Name
@@ -82,12 +82,14 @@ const ContactForm = () => {
           className="z-10 w-full p-4 bg-gray-50 border border-gray-100"
         />
       </div>
-      <button
-        type="submit"
-        disabled={loading}
-        className="px-4 py-2 w-40 bg-gray-900 disabled:bg-gray-400 disabled:text-gray-100 text-white font-medium z-10 ">
-        {loading ? "Sending...." : "Send Message"}
-      </button>
+      <div className='flex items-center justify-center'>
+        <button
+          type="submit"
+          disabled={loading}
+          className="px-4 py-2 w-40 bg-gray-900 disabled:bg-gray-400 disabled:text-gray-100 text-white font-medium z-10 ">
+          {loading ? "Sending...." : "Send Message"}
+        </button>
+      </div>
       {status && (
         <div className="z-10 mt-2 text-sm text-gray-800">{status}</div>
       )}

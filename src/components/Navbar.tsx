@@ -45,7 +45,7 @@ const Navbar = ({ active, isDark }: { active?: string | any, isDark?: boolean })
 
     return (
         <MaxWidthWrapper>
-            <header className='w-full h-20 flex items-center justify-between px-4 mb-10 sm:fixed sm:top-0 md:relative md:top-0 sm:bg-clip-padding hover:bg-clip-text'>
+            <header className='w-full h-20 flex items-center justify-between px-4'>
                 <div className='flex-shrink-0'>
                     <Logo />
                 </div>
@@ -92,8 +92,8 @@ const MobileMenu = ({ setMenuOpen, menuItems, active, onItemClick }: { setMenuOp
 
     return (
         <MaxWidthWrapper>
-            <div className="fixed top-0 left-0 w-full h-full bg-mainBackground z-50 overflow-y-hidden">
-                <div className="flex items-center justify-between p-4 border-b border-gray-300">
+            <div className="fixed top-10 left-0 w-full h-full bg-mainBackground z-50 px-4 overflow-y-hidden">
+                <div className="flex items-center justify-between p-4 border-gray-300">
                     <Logo />
                     <button
                         onClick={() => { setMenuOpen(false); onItemClick(); }}>
